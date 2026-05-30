@@ -1,34 +1,32 @@
-import { Header } from '../components/Header.js'
-import { Footer } from '../components/Footer.js'
+import { Header } from "../components/Header.js";
+import { Footer } from "../components/Footer.js";
 
 export function About() {
   return `
     ${Header()}
 
-    <main class="min-h-screen pt-24">
-      <section class="max-w-6xl mx-auto px-6 py-20">
-        <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">
-          About
-        </p>
+    <main class="pt-24 max-w-4xl mx-auto px-6">
 
-        <h1 class="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
-          This is the About page.
-        </h1>
+      <h1 class="text-4xl font-bold">About ErrandLink</h1>
 
-        <p class="mt-6 max-w-2xl text-lg text-neutral-600">
-          This page is separate from the homepage, but it still uses the same
-          Header and Footer components.
-        </p>
+      <p class="mt-6 text-neutral-600">
+        ErrandLink Inc. is a digital platform that connects clients with nearby helpers
+        who can assist with everyday tasks such as grocery shopping, delivery, and other
+        low-risk errands.
+      </p>
 
-        <a
-          href="#/"
-          class="inline-block mt-8 rounded-lg bg-neutral-900 px-5 py-3 text-white font-medium hover:bg-neutral-700"
-        >
-          Back to Home
-        </a>
-      </section>
+      <h2 class="mt-10 text-2xl font-semibold">Mission</h2>
+      <p class="mt-2 text-neutral-600">
+        To make everyday assistance accessible, fast, and community-driven.
+      </p>
+
+      <h2 class="mt-10 text-2xl font-semibold">Vision</h2>
+      <p class="mt-2 text-neutral-600">
+        A world where no simple task is a burden.
+      </p>
+
     </main>
 
     ${Footer()}
-  `
+  `;
 }
