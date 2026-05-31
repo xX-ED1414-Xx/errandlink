@@ -72,11 +72,16 @@ function initContactForm() {
     try {
       const formData = new FormData(form);
 
-      await fetch(form.action, {
+      const response = await fetch(form.action, {
         method: "POST",
         body: formData,
-        mode: "no-cors",
       });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Submission failed.");
+      }
 
       form.reset();
 
@@ -87,11 +92,12 @@ function initContactForm() {
           "Success! Your message has been sent. We will get back to you soon.";
       }
     } catch (error) {
+      console.error(error);
+
       if (status) {
         status.classList.remove("is-pending", "is-visible");
         status.classList.add("is-error");
-        status.textContent =
-          "Something went wrong. Please try again or email ditangeorgeedward@gmail.com.";
+        status.textContent = "Failed to send message. Please try again later.";
       }
     } finally {
       if (submitButton) {

@@ -51,37 +51,70 @@ export function Contact() {
             <form
               class="form-grid"
               data-contact-form
-              action="https://formsubmit.co/ditangeorgeedward@gmail.com"
+              action="https://api.web3forms.com/submit"
               method="POST"
               style="margin-top: 24px;"
             >
-              <input type="hidden" name="_subject" value="New ErrandLink Contact Form Submission" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="access_key"
+                value="36f628c7-ed39-4313-bb43-f44e257db221"
+              />
+
+              <input
+                type="hidden"
+                name="subject"
+                value="New ErrandLink Contact Form Submission"
+              />
 
               <div class="form-grid form-grid--two">
                 <label>
                   <span class="mini-label">Name</span>
-                  <input class="form-control" type="text" name="name" placeholder="Your name" required />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
                 </label>
 
                 <label>
                   <span class="mini-label">Email</span>
-                  <input class="form-control" type="email" name="email" placeholder="you@example.com" required />
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
                 </label>
               </div>
 
               <label>
                 <span class="mini-label">Subject</span>
-                <input class="form-control" type="text" name="subject" placeholder="How can we help?" required />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="subject_line"
+                  placeholder="How can we help?"
+                  required
+                />
               </label>
 
               <label>
                 <span class="mini-label">Message</span>
-                <textarea class="form-control" name="message" placeholder="Write your message here..." required></textarea>
+                <textarea
+                  class="form-control"
+                  name="message"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
               </label>
 
-              <p class="form-status" data-form-status>Thank you! Your message has been sent.</p>
+              <p class="form-status" data-form-status>
+                Thank you! Your message has been sent.
+              </p>
 
               <button class="btn btn-primary" type="submit">
                 Send message ${ArrowIcon()}
