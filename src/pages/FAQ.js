@@ -22,10 +22,14 @@ export function FAQ() {
       <section class="section section--compact">
         <div class="container" style="max-width: 880px;">
           <div class="faq-list">
-            <details class="faq-card" data-animate open>
+            <details class="faq-card" data-animate>
               <summary>
                 <span>How are helpers verified?</span>
-                <span>+</span>
+                <span class="faq-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </summary>
               <p>Helpers should go through identity checks and basic screening before they can accept tasks. This supports safer coordination between clients and helpers.</p>
             </details>
@@ -33,7 +37,11 @@ export function FAQ() {
             <details class="faq-card" data-animate>
               <summary>
                 <span>What errands are allowed?</span>
-                <span>+</span>
+                <span class="faq-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </summary>
               <p>ErrandLink is intended for legal, low-risk everyday tasks such as grocery assistance, deliveries, pickups, queueing, and routine personal errands.</p>
             </details>
@@ -41,7 +49,11 @@ export function FAQ() {
             <details class="faq-card" data-animate>
               <summary>
                 <span>How do payments and fees work?</span>
-                <span>+</span>
+                <span class="faq-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </summary>
               <p>Payments are tied to completed tasks. The platform can apply a small commission-based service fee, and subscription options can be offered for premium helper access.</p>
             </details>
@@ -49,7 +61,11 @@ export function FAQ() {
             <details class="faq-card" data-animate>
               <summary>
                 <span>Can elderly users use ErrandLink?</span>
-                <span>+</span>
+                <span class="faq-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </summary>
               <p>Yes. The website and service flow are designed with clearer labels, readable spacing, and simple instructions to make browsing easier for older users.</p>
             </details>
@@ -57,7 +73,11 @@ export function FAQ() {
             <details class="faq-card" data-animate>
               <summary>
                 <span>What makes ErrandLink different?</span>
-                <span>+</span>
+                <span class="faq-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </summary>
               <p>ErrandLink focuses on micro-errands and nearby helper matching, making small daily tasks easier to request, coordinate, and complete.</p>
             </details>
