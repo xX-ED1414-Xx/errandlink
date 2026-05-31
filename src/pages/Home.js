@@ -85,7 +85,7 @@ export function Home() {
                     <div class="avatar-row">
                       <div class="avatar">JL</div>
                       <div>
-                        <strong>Jamie L.</strong>
+                        <strong>John Gecha</strong>
                         <p class="copy verified-copy"><span aria-hidden="true">✓</span> Nearby verified helper</p>
                       </div>
                     </div>
