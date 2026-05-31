@@ -1,78 +1,82 @@
 import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
+import { ArrowIcon } from "../components/Icons.js";
 
 export function FAQ() {
   return `
     ${Header()}
 
-    <main class="pt-16 bg-slate-950 text-slate-100 min-h-screen">
-      <!-- HERO -->
-      <section class="border-b border-white/10">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <div class="mx-auto max-w-2xl text-center">
-            <span class="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
-              FAQ
-            </span>
-
-            <h1 class="mt-6 text-5xl font-bold tracking-tight text-white">
-              Answers to common questions.
-            </h1>
-
-            <p class="mt-5 text-lg leading-8 text-slate-300">
-              A few quick details about verification, allowed errands, and how payments work.
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="center-copy" data-animate>
+            <span class="eyebrow">FAQ</span>
+            <h1 class="page-title">Answers to common questions.</h1>
+            <p class="lead">
+              Quick details about verification, allowed errands, pricing, and how the ErrandLink request flow works.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ LIST -->
-      <section class="py-20">
-        <div class="mx-auto max-w-4xl px-6 space-y-4">
-          <details class="group rounded-3xl border border-white/10 bg-slate-900 p-6">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">
-              <span>How are helpers verified?</span>
-              <span class="text-slate-400 transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <p class="mt-4 leading-7 text-slate-300">
-              Helpers are verified through identity checks and basic screening before they can take tasks.
-            </p>
-          </details>
+      <section class="section section--compact">
+        <div class="container" style="max-width: 880px;">
+          <div class="faq-list">
+            <details class="faq-card" data-animate open>
+              <summary>
+                <span>How are helpers verified?</span>
+                <span>+</span>
+              </summary>
+              <p>Helpers should go through identity checks and basic screening before they can accept tasks. This supports safer coordination between clients and helpers.</p>
+            </details>
 
-          <details class="group rounded-3xl border border-white/10 bg-slate-900 p-6">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">
-              <span>What errands are allowed?</span>
-              <span class="text-slate-400 transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <p class="mt-4 leading-7 text-slate-300">
-              Only legal, low-risk everyday tasks are allowed, such as groceries, pickups, deliveries, and similar errands.
-            </p>
-          </details>
+            <details class="faq-card" data-animate>
+              <summary>
+                <span>What errands are allowed?</span>
+                <span>+</span>
+              </summary>
+              <p>ErrandLink is intended for legal, low-risk everyday tasks such as grocery assistance, deliveries, pickups, queueing, and routine personal errands.</p>
+            </details>
 
-          <details class="group rounded-3xl border border-white/10 bg-slate-900 p-6">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">
-              <span>How do payments work?</span>
-              <span class="text-slate-400 transition-transform group-open:rotate-45">+</span>
-            </summary>
-            <p class="mt-4 leading-7 text-slate-300">
-              Payments are processed per completed task, with the platform commission applied where applicable.
-            </p>
-          </details>
+            <details class="faq-card" data-animate>
+              <summary>
+                <span>How do payments and fees work?</span>
+                <span>+</span>
+              </summary>
+              <p>Payments are tied to completed tasks. The platform can apply a small commission-based service fee, and subscription options can be offered for premium helper access.</p>
+            </details>
+
+            <details class="faq-card" data-animate>
+              <summary>
+                <span>Can elderly users use ErrandLink?</span>
+                <span>+</span>
+              </summary>
+              <p>Yes. The website and service flow are designed with clearer labels, readable spacing, and simple instructions to make browsing easier for older users.</p>
+            </details>
+
+            <details class="faq-card" data-animate>
+              <summary>
+                <span>What makes ErrandLink different?</span>
+                <span>+</span>
+              </summary>
+              <p>ErrandLink focuses on micro-errands and nearby helper matching, making small daily tasks easier to request, coordinate, and complete.</p>
+            </details>
+          </div>
         </div>
       </section>
 
-      <!-- CTA STRIP -->
-      <section class="border-y border-white/10 bg-slate-900">
-        <div class="mx-auto max-w-5xl px-6 py-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 class="text-2xl font-bold text-white">Still have questions?</h2>
-            <p class="mt-2 text-slate-300">Reach out and we will help clarify anything before you get started.</p>
+      <section class="section section--compact">
+        <div class="container cta-panel" data-animate>
+          <div class="split-card">
+            <div class="stack">
+              <p class="kicker">Still have questions?</p>
+              <h2 class="section-title">Reach out before getting started.</h2>
+              <p class="lead">Send a message for service questions, partnership concerns, or pricing clarifications.</p>
+            </div>
+            <div class="actions" style="justify-content: flex-end;">
+              <a class="btn btn-primary" href="#/contact">Contact support ${ArrowIcon()}</a>
+            </div>
           </div>
-          <a
-            href="#/contact"
-            class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
-          >
-            Contact Support
-          </a>
         </div>
       </section>
     </main>

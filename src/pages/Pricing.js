@@ -1,152 +1,143 @@
 import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
+import { Icon, ArrowIcon } from "../components/Icons.js";
 
 export function Pricing() {
   return `
     ${Header()}
 
-    <main class="pt-16 bg-slate-950 text-slate-100 min-h-screen">
-
-      <!-- HEADER -->
-      <section class="border-b border-white/10">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <div class="mx-auto max-w-2xl text-center">
-            <span class="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
-              Pricing
-            </span>
-
-            <h1 class="mt-6 text-5xl font-bold tracking-tight text-white">
-              Flexible plans for every user.
-            </h1>
-
-            <p class="mt-5 text-lg leading-8 text-slate-300">
-              Start with standard pay-per-task pricing or upgrade for faster matching and priority support.
+    <main>
+      <section class="page-hero">
+        <div class="container two-column">
+          <div class="stack" data-animate>
+            <span class="eyebrow">Pricing</span>
+            <h1 class="page-title">Simple earning model with flexible support options.</h1>
+            <p class="lead">
+              ErrandLink uses a commission-based service fee for completed transactions, with optional subscriptions for users who want access to more experienced helpers.
             </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#/contact">Ask about pricing ${ArrowIcon()}</a>
+              <a class="btn btn-secondary" href="#/services">View services</a>
+            </div>
+          </div>
+
+          <div class="soft-panel" data-animate>
+            <div class="safety-note" style="padding: 22px; border-radius: 26px;">
+              <div class="icon-box">${Icon("wallet")}</div>
+              <div>
+                <p class="kicker">Transparent fees</p>
+                <h2 class="preview-title">Fees are tied to completed requests.</h2>
+                <p class="copy">This keeps the model simple for clients and sustainable for the platform.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- PRICING CARDS -->
-      <section class="py-20">
-        <div class="mx-auto max-w-6xl px-6">
-          <div class="grid gap-8 md:grid-cols-2">
+      <section class="section">
+        <div class="container">
+          <div class="center-copy" data-animate>
+            <p class="kicker">Plans and fees</p>
+            <h2 class="section-title">Choose the option that matches the user’s need.</h2>
+            <p class="lead">Use these cards as a clean frontend presentation. Exact prices can still be updated later depending on the final business decision.</p>
+          </div>
 
-            <!-- STANDARD -->
-            <div class="rounded-3xl border border-white/10 bg-slate-900 p-8">
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold text-white">
-                  Standard
-                </h2>
-
-                <p class="mt-2 text-slate-400">
-                  Ideal for occasional users.
-                </p>
-              </div>
-
-              <div class="mb-8">
-                <span class="text-4xl font-bold text-white">
-                  Pay Per Task
-                </span>
-              </div>
-
-              <ul class="space-y-4 text-slate-300">
-                <li>✓ Access to all basic services</li>
-                <li>✓ Standard helper matching</li>
-                <li>✓ Task tracking and updates</li>
-                <li>✓ Secure payment processing</li>
+          <div class="card-grid-3" style="margin-top: 38px;">
+            <article class="price-card" data-animate>
+              <p class="price-label">Basic</p>
+              <h3 class="price-title">Standard Request</h3>
+              <div class="price-value">Per task</div>
+              <p class="price-note">For regular groceries, pickups, and delivery errands.</p>
+              <ul class="card-list">
+                <li>Access to available helpers</li>
+                <li>Simple request tracking</li>
+                <li>Service fee per completed task</li>
               </ul>
-            </div>
+            </article>
 
-            <!-- PREMIUM -->
-            <div class="relative rounded-3xl border border-cyan-400/30 bg-slate-900 p-8 shadow-lg shadow-cyan-500/10">
-              <div class="absolute right-6 top-6 rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-300">
-                Recommended
-              </div>
-
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold text-white">
-                  Premium
-                </h2>
-
-                <p class="mt-2 text-slate-400">
-                  Designed for frequent users.
-                </p>
-              </div>
-
-              <div class="mb-8">
-                <span class="text-4xl font-bold text-white">
-                  Subscription
-                </span>
-              </div>
-
-              <ul class="space-y-4 text-slate-300">
-                <li>✓ Everything in Standard</li>
-                <li>✓ Priority task matching</li>
-                <li>✓ Access to experienced helpers</li>
-                <li>✓ Faster response times</li>
-                <li>✓ Priority customer support</li>
+            <article class="price-card featured" data-animate>
+              <p class="price-label">Optional</p>
+              <h3 class="price-title">Premium Helper Access</h3>
+              <div class="price-value">Subscription</div>
+              <p class="price-note">For users who prefer more experienced helpers.</p>
+              <ul class="card-list">
+                <li>Priority access to experienced helpers</li>
+                <li>Better fit for frequent users</li>
+                <li>Helpful for families and seniors</li>
               </ul>
-            </div>
+            </article>
 
+            <article class="price-card" data-animate>
+              <p class="price-label">Support</p>
+              <h3 class="price-title">Partner / Group Use</h3>
+              <div class="price-value">Custom</div>
+              <p class="price-note">For organizations or families with repeated errand needs.</p>
+              <ul class="card-list">
+                <li>Flexible coordination setup</li>
+                <li>Support for repeated requests</li>
+                <li>Can be adjusted by demand</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- SIMPLE COMPARISON -->
-      <section class="pb-20">
-        <div class="mx-auto max-w-4xl px-6">
-          <div class="overflow-hidden rounded-3xl border border-white/10 bg-slate-900">
-            <div class="border-b border-white/10 px-6 py-4">
-              <h2 class="text-xl font-semibold text-white">
-                Quick Comparison
-              </h2>
+      <section class="section section--compact">
+        <div class="container table-card" data-animate>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Standard Request</th>
+                <th>Premium Access</th>
+                <th>Partner / Group</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Task access</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+                <td>Nearby helper matching</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+                <td>Experienced helper priority</td>
+                <td>—</td>
+                <td class="check">✓</td>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Best use case</td>
+                <td>Occasional errands</td>
+                <td>Frequent or senior support</td>
+                <td>Repeated group needs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section--compact">
+        <div class="container cta-panel" data-animate>
+          <div class="split-card">
+            <div class="stack">
+              <p class="kicker">Pricing note</p>
+              <h2 class="section-title">Keep the final rates editable.</h2>
+              <p class="lead">The UI is ready for exact commission percentages, service fees, or subscription rates once your group finalizes them.</p>
             </div>
-
-            <div class="grid grid-cols-3 text-sm">
-              <div class="border-r border-white/10 p-4 text-slate-400">
-                Feature
-              </div>
-              <div class="border-r border-white/10 p-4 text-center text-white">
-                Standard
-              </div>
-              <div class="p-4 text-center text-white">
-                Premium
-              </div>
-
-              <div class="border-t border-r border-white/10 p-4 text-slate-300">
-                Task Access
-              </div>
-              <div class="border-t border-r border-white/10 p-4 text-center">
-                ✓
-              </div>
-              <div class="border-t p-4 text-center">
-                ✓
-              </div>
-
-              <div class="border-t border-r border-white/10 p-4 text-slate-300">
-                Priority Matching
-              </div>
-              <div class="border-t border-r border-white/10 p-4 text-center">
-                —
-              </div>
-              <div class="border-t p-4 text-center">
-                ✓
-              </div>
-
-              <div class="border-t border-r border-white/10 p-4 text-slate-300">
-                Premium Support
-              </div>
-              <div class="border-t border-r border-white/10 p-4 text-center">
-                —
-              </div>
-              <div class="border-t p-4 text-center">
-                ✓
-              </div>
+            <div class="actions" style="justify-content: flex-end;">
+              <a class="btn btn-primary" href="#/contact">Contact us ${ArrowIcon()}</a>
+              <a class="btn btn-secondary" href="#/faq">View FAQ</a>
             </div>
           </div>
         </div>
       </section>
-
     </main>
 
     ${Footer()}
