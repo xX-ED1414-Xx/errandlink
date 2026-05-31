@@ -1,147 +1,115 @@
 import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
+import { Icon, ArrowIcon } from "../components/Icons.js";
 
 export function About() {
   return `
     ${Header()}
 
-    <main class="pt-16 bg-slate-950 text-slate-100">
-      <!-- HERO -->
-      <section class="relative overflow-hidden border-b border-white/10">
-        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_30%),linear-gradient(to_bottom,#020617,#0f172a_70%,#111827)]"></div>
-
-        <div class="mx-auto max-w-7xl px-6 py-24 md:py-28">
-          <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div class="space-y-6" data-animate>
-              <span class="inline-flex items-center rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-sm font-semibold text-cyan-200 backdrop-blur">
-                About ErrandLink
-              </span>
-
-              <div class="space-y-4">
-                <h1 class="max-w-3xl text-5xl font-bold tracking-tight text-white md:text-6xl">
-                  Built to make everyday support feel simple.
-                </h1>
-
-                <p class="max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                  ErrandLink Inc. connects clients with nearby helpers for grocery shopping, delivery, and other low-risk errands — with a focus on speed, clarity, and trust.
-                </p>
-              </div>
-
-              <div class="flex flex-wrap gap-3 pt-2">
-                <div class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
-                  Community-driven
-                </div>
-                <div class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
-                  Fast coordination
-                </div>
-                <div class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
-                  Low-risk errands
-                </div>
-              </div>
+    <main>
+      <section class="page-hero">
+        <div class="container two-column">
+          <div class="stack" data-animate>
+            <span class="eyebrow">About ErrandLink</span>
+            <h1 class="page-title">Built to make everyday support feel simple.</h1>
+            <p class="lead">
+              ErrandLink Inc. is a digital platform company that connects clients with nearby helpers for grocery shopping, delivery, and other low-risk errands through a service that is fast, clear, and easy to trust.
+            </p>
+            <div class="pill-row">
+              <span class="tag-pill">Community-driven</span>
+              <span class="tag-pill">Fast coordination</span>
+              <span class="tag-pill">Low-risk errands</span>
             </div>
+          </div>
 
-            <div class="relative" data-animate>
-              <div class="absolute -left-6 top-10 h-24 w-24 rounded-full bg-cyan-400/10 blur-2xl"></div>
-              <div class="absolute -right-8 bottom-8 h-32 w-32 rounded-full bg-blue-400/10 blur-2xl"></div>
-
-              <div class="relative overflow-hidden rounded-4xl border border-white/10 bg-slate-900/85 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl">
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p class="text-sm font-medium text-slate-400">What we do</p>
-                    <p class="mt-2 text-lg font-semibold text-white">Connect people to trusted nearby helpers.</p>
-                  </div>
-
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p class="text-sm font-medium text-slate-400">What we value</p>
-                    <p class="mt-2 text-lg font-semibold text-white">Speed, safety, and clear communication.</p>
-                  </div>
-
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
-                    <p class="text-sm font-medium text-slate-400">Platform promise</p>
-                    <p class="mt-2 text-lg font-semibold text-white">Make simple errands feel effortless from request to completion.</p>
-                  </div>
-                </div>
+          <div class="soft-panel" data-animate>
+            <div class="card-grid-2">
+              <div class="small-card">
+                <p class="mini-label">What we do</p>
+                <h2 class="preview-title">Connect people to trusted nearby helpers.</h2>
+              </div>
+              <div class="small-card">
+                <p class="mini-label">What we value</p>
+                <h2 class="preview-title">Speed, safety, and clear communication.</h2>
+              </div>
+              <div class="small-card" style="grid-column: 1 / -1;">
+                <p class="mini-label">Platform promise</p>
+                <h2 class="preview-title">Make simple errands feel effortless from request to completion.</h2>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTENT -->
-      <section class="bg-slate-900 py-24">
-        <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-3">
-          <div class="rounded-3xl border border-white/10 bg-slate-950 p-8 shadow-sm" data-animate>
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-            </div>
-            <h2 class="mt-5 text-2xl font-semibold text-white">Mission</h2>
-            <p class="mt-3 leading-8 text-slate-300">
-              To make everyday assistance accessible, fast, and community-driven.
-            </p>
-          </div>
+      <section class="section">
+        <div class="container card-grid-3">
+          <article class="info-card" data-animate>
+            <div class="icon-box">${Icon("heart")}</div>
+            <h2 class="card-title">Mission</h2>
+            <p class="card-copy">To make everyday assistance more accessible, organized, and community-driven for people who need help with simple tasks.</p>
+          </article>
 
-          <div class="rounded-3xl border border-white/10 bg-slate-950 p-8 shadow-sm" data-animate>
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-400/10 text-blue-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19V5" />
-                <path d="M4 5h14v14H4z" />
-                <path d="M8 9h8" />
-                <path d="M8 13h5" />
-              </svg>
-            </div>
-            <h2 class="mt-5 text-2xl font-semibold text-white">Vision</h2>
-            <p class="mt-3 leading-8 text-slate-300">
-              A world where no simple task is a burden.
-            </p>
-          </div>
+          <article class="info-card" data-animate>
+            <div class="icon-box">${Icon("star")}</div>
+            <h2 class="card-title">Vision</h2>
+            <p class="card-copy">A community where no simple errand becomes a heavy burden, especially for busy individuals, families, and elderly users.</p>
+          </article>
 
-          <div class="rounded-3xl border border-white/10 bg-slate-950 p-8 shadow-sm" data-animate>
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10Z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <h2 class="mt-5 text-2xl font-semibold text-white">Approach</h2>
-            <p class="mt-3 leading-8 text-slate-300">
-              A simple, polished platform that helps clients get support quickly while giving helpers clear and manageable tasks.
-            </p>
-          </div>
+          <article class="info-card" data-animate>
+            <div class="icon-box">${Icon("shield")}</div>
+            <h2 class="card-title">Approach</h2>
+            <p class="card-copy">Keep every request low-risk, clearly scoped, and easier to coordinate from the first message until task completion.</p>
+          </article>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="bg-slate-950 py-24">
-        <div class="mx-auto max-w-7xl px-6">
-          <div class="rounded-4xl border border-white/10 bg-slate-900 px-8 py-12 shadow-2xl shadow-black/30 md:px-12" data-animate>
-            <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <section class="section section--compact">
+        <div class="container feature-panel split-card" data-animate>
+          <div class="stack">
+            <p class="kicker">How the business works</p>
+            <h2 class="section-title">A platform model built around simple transactions and optional premium access.</h2>
+            <p class="lead">
+              ErrandLink earns through a commission-based service fee on completed transactions. Subscription options can also provide access to more experienced helpers for users who need extra convenience.
+            </p>
+          </div>
+
+          <div class="step-list">
+            <div class="step-card">
+              <div class="step-number">01</div>
               <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Our focus</p>
-                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Reliable help, without the friction.
-                </h2>
-                <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
-                  ErrandLink is designed to make small tasks feel organized, modern, and easy to trust.
-                </p>
+                <h3 class="step-title">Clients request help</h3>
+                <p class="copy">The client posts a clear, low-risk task with the needed details.</p>
               </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <div>
+                <h3 class="step-title">Helpers accept tasks</h3>
+                <p class="copy">Nearby helpers receive tasks that fit their availability and capability.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <div>
+                <h3 class="step-title">Platform supports the process</h3>
+                <p class="copy">ErrandLink provides the request flow, status tracking, and communication structure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="flex flex-col gap-4 sm:flex-row lg:justify-end">
-                <a
-                  href="#/services"
-                  class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
-                >
-                  View Services
-                </a>
-                <a
-                  href="#/contact"
-                  class="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3.5 font-semibold text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-                >
-                  Contact Us
-                </a>
-              </div>
+      <section class="section section--compact">
+        <div class="container cta-panel" data-animate>
+          <div class="split-card">
+            <div class="stack">
+              <p class="kicker">Our focus</p>
+              <h2 class="section-title">Reliable help, without the friction.</h2>
+              <p class="lead">ErrandLink is designed to make small tasks feel organized, modern, and easy to trust.</p>
+            </div>
+            <div class="actions" style="justify-content: flex-end;">
+              <a class="btn btn-primary" href="#/services">View services ${ArrowIcon()}</a>
+              <a class="btn btn-secondary" href="#/contact">Contact us</a>
             </div>
           </div>
         </div>

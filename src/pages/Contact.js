@@ -1,98 +1,76 @@
 import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
+import { Icon, ArrowIcon } from "../components/Icons.js";
 
 export function Contact() {
   return `
     ${Header()}
 
-    <main class="pt-16 bg-slate-950 text-slate-100 min-h-screen">
-      <!-- HERO -->
-      <section class="border-b border-white/10">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <div class="mx-auto max-w-2xl text-center">
-            <span class="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
-              Contact Us
-            </span>
-
-            <h1 class="mt-6 text-5xl font-bold tracking-tight text-white">
-              Let’s talk.
-            </h1>
-
-            <p class="mt-5 text-lg leading-8 text-slate-300">
-              Send a message for support, partnership questions, or general inquiries.
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="center-copy" data-animate>
+            <span class="eyebrow">Contact Us</span>
+            <h1 class="page-title">Let’s talk about your errand needs.</h1>
+            <p class="lead">
+              Send a message for support, partnership questions, service clarification, or general inquiries about ErrandLink.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT GRID -->
-      <section class="py-20">
-        <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[0.9fr_1.1fr]">
-          
-          <!-- INFO -->
-          <div class="space-y-6">
-            <div class="rounded-3xl border border-white/10 bg-slate-900 p-8">
-              <h2 class="text-2xl font-bold text-white">Contact details</h2>
-              <div class="mt-6 space-y-4 text-slate-300">
-                <p>
-                  <span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Email</span>
-                  support@errandlink.com
-                </p>
-                <p>
-                  <span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Phone</span>
-                  +63 900 000 0000
-                </p>
-                <p>
-                  <span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Hours</span>
-                  Daily, 8:00 AM to 8:00 PM
-                </p>
-              </div>
+      <section class="section section--compact">
+        <div class="container contact-grid">
+          <div class="stack" data-animate>
+            <div class="info-card">
+              <div class="icon-box">${Icon("chat")}</div>
+              <h2 class="card-title">Contact details</h2>
+              <ul class="card-list">
+                <li>Email: support@errandlink.com</li>
+                <li>Phone: +63 900 000 0000</li>
+                <li>Hours: Daily, 8:00 AM to 8:00 PM</li>
+              </ul>
             </div>
 
-            <div class="rounded-3xl border border-white/10 bg-slate-900 p-8">
-              <h2 class="text-2xl font-bold text-white">What to include</h2>
-              <p class="mt-3 leading-7 text-slate-300">
-                Add your name, preferred contact method, and a short description of what you need.
-              </p>
+            <div class="info-card">
+              <div class="icon-box">${Icon("list")}</div>
+              <h2 class="card-title">What to include</h2>
+              <p class="card-copy">Add your name, preferred contact method, and a short description of the errand or question you need help with.</p>
             </div>
           </div>
 
-          <!-- FORM -->
-          <div class="rounded-3xl border border-white/10 bg-slate-900 p-8 shadow-2xl shadow-black/20">
-            <h2 class="text-2xl font-bold text-white">Send a message</h2>
-            <p class="mt-2 text-slate-400">
-              We usually respond as soon as possible during operating hours.
-            </p>
+          <div class="form-card" data-animate>
+            <div class="stack" style="gap: 10px;">
+              <p class="kicker">Message form</p>
+              <h2 class="section-title" style="font-size: clamp(1.85rem, 3vw, 2.65rem);">Send a message</h2>
+              <p class="copy">This is a frontend-friendly form layout. It can be connected to backend handling later if needed.</p>
+            </div>
 
-            <form class="mt-8 space-y-4">
-              <div class="grid gap-4 md:grid-cols-2">
-                <input
-                  class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400/40"
-                  placeholder="Name"
-                />
-                <input
-                  class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400/40"
-                  placeholder="Email"
-                />
+            <form class="form-grid" data-contact-form style="margin-top: 24px;">
+              <div class="form-grid form-grid--two">
+                <label>
+                  <span class="mini-label">Name</span>
+                  <input class="form-control" type="text" name="name" placeholder="Your name" required />
+                </label>
+                <label>
+                  <span class="mini-label">Email</span>
+                  <input class="form-control" type="email" name="email" placeholder="you@example.com" required />
+                </label>
               </div>
 
-              <input
-                class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400/40"
-                placeholder="Subject"
-              />
+              <label>
+                <span class="mini-label">Subject</span>
+                <input class="form-control" type="text" name="subject" placeholder="How can we help?" required />
+              </label>
 
-              <textarea
-                rows="6"
-                class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400/40"
-                placeholder="Message"
-              ></textarea>
+              <label>
+                <span class="mini-label">Message</span>
+                <textarea class="form-control" name="message" placeholder="Write your message here..." required></textarea>
+              </label>
 
-              <button
-                type="submit"
-                class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
-              >
-                Send Message
-              </button>
+              <p class="form-status" data-form-status>Thank you! Your message is ready for frontend testing.</p>
+
+              <button class="btn btn-primary" type="submit">Send message ${ArrowIcon()}</button>
             </form>
           </div>
         </div>
