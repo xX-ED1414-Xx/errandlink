@@ -1,5 +1,7 @@
+const html = String.raw;
+
 function LogoMark() {
-  return `
+  return html `
     <span class="logo-mark logo-mark--small" aria-hidden="true">
       <svg viewBox="0 0 64 48" role="img" class="brand-symbol">
         <defs>
@@ -20,7 +22,7 @@ function LogoMark() {
   `;
 }
 export function Footer() {
-  return `
+  return html `
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
