@@ -1,3 +1,5 @@
+const html = String.raw;
+
 const navItems = [
   { label: "Home", href: "#/", path: "/" },
   { label: "About", href: "#/about", path: "/about" },
@@ -9,7 +11,7 @@ const navItems = [
 ];
 
 function LogoMark() {
-  return `
+  return html `
     <span class="logo-mark" aria-hidden="true">
       <svg viewBox="0 0 64 48" role="img" class="brand-symbol">
         <defs>
@@ -33,7 +35,7 @@ function navLinks(currentPath) {
   return navItems
     .map((item) => {
       const isActive = currentPath === item.path;
-      return `
+      return html `
         <a class="nav-link ${isActive ? "is-active" : ""}" href="${item.href}" ${
           isActive ? 'aria-current="page"' : ""
         }>
@@ -47,7 +49,7 @@ function navLinks(currentPath) {
 export function Header() {
   const currentPath = window.location.hash.slice(1) || "/";
 
-  return `
+  return html `
     <header class="site-header">
       <div class="site-header__inner">
         <a href="#/" class="brand-link" aria-label="ErrandLink home">

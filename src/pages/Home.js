@@ -2,8 +2,10 @@ import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
 import { Icon, ArrowIcon } from "../components/Icons.js";
 
+const html = String.raw;
+
 export function Home() {
-  return `
+  return html `
     ${Header()}
 
     <main>
@@ -83,7 +85,7 @@ export function Home() {
                   <div class="small-card small-card--clean">
                     <p class="mini-label">Helper</p>
                     <div class="avatar-row">
-                      <div class="avatar">JL</div>
+                      <div class="avatar">JG</div>
                       <div>
                         <strong>John Gecha</strong>
                         <p class="copy verified-copy"><span aria-hidden="true">✓</span> Nearby verified helper</p>

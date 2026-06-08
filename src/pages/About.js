@@ -2,8 +2,10 @@ import { Header } from "../components/Header.js";
 import { Footer } from "../components/Footer.js";
 import { Icon, ArrowIcon } from "../components/Icons.js";
 
+const html = String.raw;
+
 export function About() {
-  return `
+  return html `
     ${Header()}
 
     <main>
